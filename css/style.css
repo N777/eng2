@@ -1,0 +1,20 @@
+.back{
+    background-image: url(../img/widen_1220x0.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+li a{
+    color:azure
+}
+.mx-auto{
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  
+}
+h3{
+    text-align: center;
+}
+.shadow{
+    background-color: #dae0e5db !important;
+}

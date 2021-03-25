@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans+Caption&display=swap" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/juxtapose.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/script.js"></script>
+    
+    
+    <title>Main</title>
+</head>
+<body class="container back">
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">History</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Сompare</a>
+        </li>
+      </ul>
+    <div class="container shadow p-3 mb-5 rounded">
+      <img src="img/directxraytracingdemo4_large.gif" class="img-fluid mx-auto rounded " alt="...">
+        <h3>What is ray tracing?</h3>
+        <p>Simply put, ray tracing is a technique that makes light
+            in videogames behave like it does in real life. It works
+            by simulating actual light rays, using an algorithm to
+            trace the path that a beam of light would take in the
+            physical world. Using this technique, game designers can
+            make virtual rays of light appear to bounce off objects,
+            cast realistic shadows, and create lifelike reflections.</p>
+            <p>First conceptualized in 1969, ray tracing technology has
+                been used for years to simulate in the film industry. But even today, the technology
+                requires considerable computing power.</p>
+            <p>“A game needs to run 60 frames per second, or 120 frames per second, so it needs to compute each frame in 16 milliseconds,” says Tony Tamasi, vice president of technical marketing at graphics card developer Nvidia. “Whereas a typical film frame is pre-rendered, and they can take eight or 12 or 24 hours to render a single frame.”</p>
+            <p>This newfound excitement around ray tracing comes just as home gaming hardware is on the cusp of being able to process lighting effects in real time. The graphics chips that will go into the next generation of gaming PCs and videogame consoles should have the rendering power to produce ray-traced scenes on the fly. When that happens, it could result in a tectonic shift for visuals in gaming.</p>
+            <h3>How is it different than what we’ve seen before?</h3>
+            <p>If you look at the way light works in videogames now, it might seem like all the elements are there: reflections, shadows, bloom, lens flare. But all that is just sophisticated trickery. Programmers can pre-render light effects (even with some ray tracing), but these are baked(zipped) into the scene-essentially just packaged animations that always play out the same way. These effects can look quite convincing, but they’re not dynamic.</p>
+            <p>“The problem with that is that it’s completely static,” Tamasi says. “Unless you render in real time, the lighting is just going to be wrong.”</p>
+            <p>If the player alters the environment by - for example - blasting a hole through a wall, the light in the scene won’t change to stream through that hole unless the developers have specifically planned for that possibility. With real-time ray tracing, the light would adjust automatically.</p>
+            <h3>How does ray tracing work?</h3>
+            <p>In real life, light comes to you. Waves made up of countless little photons shoot out of a light source, bounce across and through a variety of surfaces, then smack you right in the eyeballs. Your brain then interprets all these different rays of light as one complete picture.</p>   
+            <p>Ray tracing functions nearly the same way, except that everything generally moves in the opposite direction. Inside the software, ray-traced light begins at the viewer (from the camera lens, essentially) and moves outward, plotting a path that bounces across multiple objects, sometimes even taking on their color and reflective properties, until the software determines the appropriate light source(s) that would affect that particular ray. This technique of simulating vision backward is far more efficient for a computer to handle than trying to trace the rays from the light source. After all, the only light paths that need to be rendered are the ones that fit into the user’s field of view. It takes far less computing power to display what’s in front of you than it would to render the rays emitted from all sources of light in a scene.</p>
+            <p>Still, that’s not to say it’s easy. “Thousands of billions of photons enter your eye every second,” says the NCSA's Christensen. “That’s way more than the number of calculations a computer can do per second … so there’s a lot of optimizing and efficiency and hacking that needs to happen in order to even begin to make something look realistic.”</p>
+            <p>Rather than try to map out every single ray of light, the solution for developers at Nvidia is to trace only a select number of the most important rays, then use machine learning algorithms to fill in the gaps and smooth everything out. It’s a process called “denoising.”</p>
+            <p>“Rather than shooting hundreds or thousands of rays per pixels, we’ll actually shoot a few or maybe a few dozen,” Tamasi says. “So we use different classes of denoisers to assemble the final image.”</p>
+    </div>
+</body>
+</html>
