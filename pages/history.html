@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans+Caption&display=swap" rel="stylesheet">
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="../js/juxtapose.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/script.js"></script>
+    
+    <title>Source</title>
+</head>
+<body class="container back">
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" href="../index.html">Main</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="compare.html">Сompare</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="history.html">History</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="source.html">Source</a>
+        </li>
+      </ul>
+    <div class="container shadow p-3 mb-5 rounded">
+      <h2>Ray Tracing Explained</h2>
+      <p>Ray tracing is different. In the real-world, the 3D objects we see are illuminated by light sources, and photons can bounce from one object to another before reaching the viewer’s eyes.</p>
+      <p>Light may be blocked by some objects, creating shadows. Or light may reflect from one object to another, such as when we see the images of one object reflected in the surface of another. And then there are refractions — when light changes as it passes through transparent or semi-transparent objects, like glass or water.</p>
+      <p>Ray tracing captures those effects by working back from our eye (or view camera) — a technique that was first described by IBM’s Arthur Appel, in 1969, in “<a href="https://dl.acm.org/citation.cfm?id=1468082">Some Techniques for Shading Machine Renderings of Solids</a>.” It traces the path of a light ray through each pixel on a 2D viewing surface out into a 3D model of the scene.</p>
+      <p>The next major breakthrough came a decade later. In a 1979 paper, “<a href="https://dl.acm.org/citation.cfm?id=358882">An Improved Illumination Model for Shaded Display</a>,” Turner Whitted, now with <a href="https://www.nvidia.com/en-us/research/">NVIDIA Research</a>, showed how to capture reflection, shadows and refraction.</p>
+      <figure class="figure"><picture loading="lazy" class="wp-image-39179">
+      <img loading="lazy" src="https://blogs.nvidia.com/wp-content/uploads/2018/03/ray-tracing-turner-whitted-paper.png" alt="Turner Whitted’s 1979 paper jump started a ray tracing renaissance that has remade movies."  srcset="https://blogs.nvidia.com/wp-content/uploads/2018/03/ray-tracing-turner-whitted-paper.png 729w, https://blogs.nvidia.com/wp-content/uploads/2018/03/ray-tracing-turner-whitted-paper-400x166.png 400w, https://blogs.nvidia.com/wp-content/uploads/2018/03/ray-tracing-turner-whitted-paper-672x279.png 672w, https://blogs.nvidia.com/wp-content/uploads/2018/03/ray-tracing-turner-whitted-paper-406x169.png 406w, https://blogs.nvidia.com/wp-content/uploads/2018/03/ray-tracing-turner-whitted-paper-188x78.png 188w" sizes="(max-width: 1080px) 100vw, 1080px"/>
+      </picture>
+      <figcaption class="figure-caption">Turner Whitted’s 1979 paper jump started a ray tracing renaissance that has remade movies.</figcaption></figure>
+      <p>With Whitted’s technique, when a ray encounters an object in the scene, the color and lighting information at the point of impact on the object’s surface contributes to the pixel color and illumination level. If the ray bounces off or travels through the surfaces of different objects before reaching the light source, the color and lighting information from all those objects can contribute to the final pixel color.</p>
+      <p>Another pair of papers in the 1980s laid the rest of the intellectual foundation for the computer graphics revolution that upended the way movies are made.</p>
+      <p>In 1984, <a href="https://dl.acm.org/citation.cfm?id=808590">Lucasfilm’s Robert Cook, Thomas Porter and Loren Carpenter detailed</a> how ray tracing could incorporate a number of common filmmaking techniques — including motion blur, depth of field, penumbras, translucency and fuzzy reflections — that could, until then, only be created with cameras.</p>
+      <p>Two years later, CalTech professor Jim Kajiya’s paper, “<a href="https://dl.acm.org/citation.cfm?id=15902">The Rendering Equation</a>,” finished the job of mapping the way computer graphics were generated to physics to better represent the way light scatters throughout a scene.</p>
+      <p>Combine this research with modern GPUs, and the results are computer-generated images that capture shadows, reflections and refractions in ways that can be indistinguishable from photographs or video of the real world. That realism is why ray tracing has gone on to conquer modern moviemaking.</p>
+      <figure class="figure"><picture loading="lazy" class="wp-image-39176">
+      <img loading="lazy" src="https://blogs.nvidia.com/wp-content/uploads/2018/03/what-is-ray-tracing-explaination.jpg" alt="Light, shadow, reflection: This computer-generated image, created by XXX using YYY, shows ray traced glass distortion in the light fixture, diffuse lighting in the window, and frosted glass in the lantern on the floor reflection on the frame picture." width="1080" height="612" srcset="https://blogs.nvidia.com/wp-content/uploads/2018/03/what-is-ray-tracing-explaination.jpg 1906w, https://blogs.nvidia.com/wp-content/uploads/2018/03/what-is-ray-tracing-explaination-400x227.jpg 400w, https://blogs.nvidia.com/wp-content/uploads/2018/03/what-is-ray-tracing-explaination-768x435.jpg 768w, https://blogs.nvidia.com/wp-content/uploads/2018/03/what-is-ray-tracing-explaination-672x381.jpg 672w, https://blogs.nvidia.com/wp-content/uploads/2018/03/what-is-ray-tracing-explaination-794x450.jpg 794w, https://blogs.nvidia.com/wp-content/uploads/2018/03/what-is-ray-tracing-explaination-379x215.jpg 379w, https://blogs.nvidia.com/wp-content/uploads/2018/03/what-is-ray-tracing-explaination-176x100.jpg 176w, https://blogs.nvidia.com/wp-content/uploads/2018/03/what-is-ray-tracing-explaination-1280x725.jpg 1280w" sizes="(max-width: 1080px) 100vw, 1080px"/>
+      </picture>
+      <figcaption class="figure-caption">This computer-generated image, created by Enrico Cerica using OctaneRender, shows ray traced glass distortion in the light fixture, diffuse lighting in the window and frosted glass in the lantern on the floor reflection on the frame picture.</figcaption></figure>
+      <p>It’s also very computationally intensive. That’s why movie makers rely on vast numbers of servers, or rendering farms. And it can take days, even weeks, to render complex special effects.</p>
+      <p>To be sure, many factors contribute to the overall graphics quality and performance of ray tracing. In fact, because ray tracing is so computationally intensive, it’s often used for rendering those areas or objects in a scene that benefit the most in visual quality and realism from the technique, while the rest of the scene is rendered using rasterization. Rasterization can still deliver excellent graphics quality.</p>
+      
+        <div class="footer">
+              <p>Kuzmina Elena Valerevna</p>
+              <p>Julia Eremeeva, Vadim Egorov</p>
+              <p>IVTASbd-21</p>
+            </div>
+    </div>
+</body>
+</html>
