@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
     <script src="../js/script.js"></script>
     
     <title>Сompare</title>
@@ -30,10 +32,18 @@
         </li>
       </ul>
     <div class="container shadow p-3 mb-5 rounded">
+      
+        
         <h5 class="text-center">In the images and videos below, you can see how much ray tracing improves the picture.</h5>
         <img src="../img/ss-raytracing-step-05.97dp0d.image.h88.jpg" width="100%" class="img-fluid mx-auto rounded ">
-        <iframe frameborder="0" class="juxtapose" width="100%" height="610" title="Please accept cookies to see this iframe." __idm_frm__="10843" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=072841ee-aa1a-11e9-b9b8-0edaf8f81e27"></iframe>
-        <iframe frameborder="0" class="juxtapose" width="100%" height="610" title="Please accept cookies to see this iframe." __idm_frm__="10844" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=189cf3e8-aa1a-11e9-b9b8-0edaf8f81e27" alt="Compare is download"></iframe>
+        <div class="juxtapose">
+          <img src="..\img\control_ray_tracing_2_rtx_off.png" />
+          <img src="..\img\control_ray_tracing_2_rtx_on.png" />
+        </div>
+        <div class="juxtapose">
+          <img src="..\img\control_ray_tracing_6_rtx_off.png" />
+          <img src="..\img\control_ray_tracing_6_rtx_on.png" />
+        </div>
         <div class=""><iframe width="100%" height="500" src="https://www.youtube.com/embed/45pfvYX-fxU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <iframe width="100%" height="500" src="https://www.youtube.com/embed/vM0oDFvyCWk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
         <div class="footer">
@@ -43,4 +53,6 @@
             </div>
     </div>
 </body>
+<script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+<link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
 </html>
